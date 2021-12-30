@@ -89,20 +89,25 @@ let questionCounter;
 let score;
 let currentQuestion;
 let availableQuestions;
-let acceptingAnswer;
+let choosingAnswer;
 
-const maxQuestion = 3;
+const maxQuestion = 5;
 const bonus = 10;
 
 function startGame(){
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
+    // console.log(availableQuestions);
     getNewQuestion ();
 
 };
 
 function getNewQuestion() {
+    if(questionCounter >= maxQuestion) {
+        return window.location.assign("/submit.html");
+    }
+
     questionCounter++ ;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -115,8 +120,25 @@ function getNewQuestion() {
     })
 
     availableQuestions.splice(questionIndex, 1);
+    // console.log(availableQuestions);
+
+    choosingAnswer = true;
 
 };
+
+answersTexts.forEach((answerText, index) => {
+    answerText.addEventListener('click', () => {
+        if (!choosingAnswer) {
+            return;
+        }
+
+        choosingAnswer = false;
+        
+        getNewQuestion()
+        // console.log(availableQuestions);
+    })
+    
+})
 
 startGame();
 

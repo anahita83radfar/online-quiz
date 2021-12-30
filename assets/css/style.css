@@ -78,6 +78,7 @@ h2 {
     margin-bottom: 10px;
     border: 1px solid rgb(180, 186, 204) ;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .answer-container:hover {
@@ -110,4 +111,12 @@ h2 {
 .huddle-label,
 .huddle-text {
     text-align: center;
+}
+
+.correct {
+    background-color: #b0d689;
+}
+
+.incorrect {
+    background-color: #d86666;
 }
