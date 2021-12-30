@@ -84,6 +84,8 @@ let questions = [
 const question = document.getElementById("question");
 const answersTexts = Array.from(document.getElementsByClassName("answer-text"));
 const answersPrefixs = Array.from(document.getElementsByClassName("answer-prefix"));
+const questionCounterContent = document.getElementById("questionCounter");
+const scoreConten = document.getElementById("score");
 
 let questionCounter;
 let score;
@@ -105,9 +107,12 @@ function startGame(){
 function getNewQuestion() {
     if(availableQuestions.length === 0) {
         return window.location.assign("/submit.html");
+        // GO TO SUBMIT PAGE
     }
 
     questionCounter++ ;
+    questionCounterContent.innerHTML = `${questionCounter}/${questions.length}`;
+    
     const questionIndex = 0;
     currentQuestion = availableQuestions[questionIndex];
     question.innerHTML = currentQuestion.question;
@@ -143,6 +148,10 @@ answersTexts.forEach((answerText, index) => {
         let selectedAnswer = answersPrefixs[index];
         selectedAnswer.classList.add(classToApply);
 
+        if (classToApply === "correct") {
+            increaseScore(bonus);
+        }
+
         setTimeout(() => {
             selectedAnswer.classList.remove(classToApply);
             getNewQuestion()
@@ -154,5 +163,7 @@ answersTexts.forEach((answerText, index) => {
 
 startGame();
 
-
-
+function increaseScore(number) {
+    score += number;
+    scoreConten.innerHTML = score;
+}
