@@ -91,25 +91,24 @@ let currentQuestion;
 let availableQuestions;
 let choosingAnswer;
 
-const maxQuestion = 5;
 const bonus = 10;
 
 function startGame(){
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    // console.log(availableQuestions);
+    console.log(availableQuestions);
     getNewQuestion ();
 
 };
 
 function getNewQuestion() {
-    if(questionCounter >= maxQuestion) {
+    if(availableQuestions.length === 0) {
         return window.location.assign("/submit.html");
     }
 
     questionCounter++ ;
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    const questionIndex = 0;
     currentQuestion = availableQuestions[questionIndex];
     question.innerHTML = currentQuestion.question;
     
@@ -120,7 +119,6 @@ function getNewQuestion() {
     })
 
     availableQuestions.splice(questionIndex, 1);
-    // console.log(availableQuestions);
 
     choosingAnswer = true;
 
@@ -133,9 +131,23 @@ answersTexts.forEach((answerText, index) => {
         }
 
         choosingAnswer = false;
-        
-        getNewQuestion()
-        // console.log(availableQuestions);
+        const selectedChoice = index + 1 ;
+
+        let classToApply 
+        if (selectedChoice == currentQuestion.correct) {
+            classToApply = "correct";
+        } else {
+            classToApply = "incorrect";
+        };
+
+        let selectedAnswer = answersPrefixs[index];
+        selectedAnswer.classList.add(classToApply);
+
+        setTimeout(() => {
+            selectedAnswer.classList.remove(classToApply);
+            getNewQuestion()
+        }, 500);
+      
     })
     
 })
