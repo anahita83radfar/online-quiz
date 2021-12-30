@@ -85,6 +85,40 @@ const question = document.getElementById("question");
 const answersTexts = Array.from(document.getElementsByClassName("answer-text"));
 const answersPrefixs = Array.from(document.getElementsByClassName("answer-prefix"));
 
+let questionCounter;
+let score;
+let currentQuestion;
+let availableQuestions;
+let acceptingAnswer;
 
-console.log(answersTexts[1]);
-console.log(answersPrefixs[1]);
+const maxQuestion = 3;
+const bonus = 10;
+
+function startGame(){
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestion ();
+
+};
+
+function getNewQuestion() {
+    questionCounter++ ;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerHTML = currentQuestion.question;
+    
+
+    answersTexts.forEach((answerText, index) => {
+    const number = ++index;
+    answerText.innerHTML = currentQuestion[`answer${number}`];
+    })
+
+    availableQuestions.splice(questionIndex, 1);
+
+};
+
+startGame();
+
+
+
