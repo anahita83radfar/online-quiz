@@ -96,3 +96,16 @@ h2 {
     color: #3a3a3a;
     padding-left: 5px;
 }
+
+/* HEADS UP DISPLAY */
+#huddle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.huddle-label,
+.huddle-text {
+    text-align: center;
+}
