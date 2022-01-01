@@ -107,6 +107,7 @@ function startGame(){
 
 function getNewQuestion() {
     if(availableQuestions.length === 0) {
+        localStorage.setItem("finalScore", score);
         return window.location.assign("/submit.html");
         // GO TO SUBMIT PAGE
     }
@@ -172,3 +173,4 @@ function increaseScore(number) {
     score += number;
     scoreConten.innerHTML = score;
 }
+
