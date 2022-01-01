@@ -21,6 +21,8 @@ saveBtn.addEventListener('click', (e) => {
     higherScores.splice(3);
 
     localStorage.setItem("higherScores", JSON.stringify(higherScores));
+    window.location.assign("/index.html");
+    // GO TO HOME PAGE
 })
 
 userName.addEventListener('keyup', () => {

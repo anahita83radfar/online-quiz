@@ -100,7 +100,6 @@ function startGame(){
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    console.log(availableQuestions);
     getNewQuestion ();
 
 };
@@ -116,8 +115,6 @@ function getNewQuestion() {
     questionCounterContent.innerHTML = `${questionCounter}/${questions.length}`;
     progressBarFull.style.width = `${(questionCounter/questions.length) * 100}%`;
     progressBarFull.innerHTML = `${(questionCounter/questions.length) * 100}%`;
-
-    console.log((questionCounter/questions.length) * 100);
     
     const questionIndex = 0;
     currentQuestion = availableQuestions[questionIndex];
