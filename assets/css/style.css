@@ -168,3 +168,20 @@ input {
 input::placeholder {
     color: #b4bacc;
 }
+
+/* HIGH SCORES PAGE */
+
+#high-scores h2 {
+    color: #5e7fdb;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#higher-scores-list li {
+    padding: 5px;
+    color: #3a3a3a;
+}
