@@ -86,6 +86,7 @@ const answersTexts = Array.from(document.getElementsByClassName("answer-text"));
 const answersPrefixs = Array.from(document.getElementsByClassName("answer-prefix"));
 const questionCounterContent = document.getElementById("questionCounter");
 const scoreConten = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
 
 let questionCounter;
 let score;
@@ -112,6 +113,10 @@ function getNewQuestion() {
 
     questionCounter++ ;
     questionCounterContent.innerHTML = `${questionCounter}/${questions.length}`;
+    progressBarFull.style.width = `${(questionCounter/questions.length) * 100}%`;
+    progressBarFull.innerHTML = `${(questionCounter/questions.length) * 100}%`;
+
+    console.log((questionCounter/questions.length) * 100);
     
     const questionIndex = 0;
     currentQuestion = availableQuestions[questionIndex];
