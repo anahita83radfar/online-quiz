@@ -9,7 +9,7 @@
 body {
     background-color: #ecf1ff;
     font-family: 'Raleway', sans-serif;
-    color: #5e7fdb;
+    color: #224cbd;
 }
 
 /* a */
@@ -89,7 +89,7 @@ h2 {
 
 .answer-prefix {
     padding: 10px 15px;
-    background-color: #5e7fdb;
+    background-color: #224cbd;
     color: #fff;
 }
 
@@ -129,7 +129,7 @@ h2 {
 .progress-bar-full {
     width: 0%;
     height: 100%;
-    background-color: #5e7fdb;
+    background-color: #224cbd;
     border-radius: 5px;
     margin-top: 10px;
     font-size: 8px;
@@ -172,7 +172,7 @@ input::placeholder {
 /* HIGH SCORES PAGE */
 
 #high-scores h2 {
-    color: #5e7fdb;
+    color: #224cbd;
 }
 
 ul {
@@ -184,4 +184,10 @@ ul {
 #higher-scores-list li {
     padding: 5px;
     color: #3a3a3a;
+    font-size: 16px;
+}
+
+#higher-scores-list li:hover{
+    font-size: 18px;
+    font-weight: 600;
 }

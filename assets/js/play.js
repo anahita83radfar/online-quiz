@@ -1,3 +1,15 @@
+/**
+ * DECLARE CONSTANTS FOR DOM ELEMENTS
+ */
+const question = document.getElementById("question");
+const answersTexts = Array.from(document.getElementsByClassName("answer-text"));
+const answersPrefixs = Array.from(document.getElementsByClassName("answer-prefix"));
+const questionCounterContent = document.getElementById("questionCounter");
+const scoreConten = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
+
+
+// DACLARE AND INITIALIZE QUESTIONS ARRAY
 let questions = [
     {
         question : "Area 51 is located in which US state?",
@@ -81,13 +93,6 @@ let questions = [
     },
 ]
 
-const question = document.getElementById("question");
-const answersTexts = Array.from(document.getElementsByClassName("answer-text"));
-const answersPrefixs = Array.from(document.getElementsByClassName("answer-prefix"));
-const questionCounterContent = document.getElementById("questionCounter");
-const scoreConten = document.getElementById("score");
-const progressBarFull = document.getElementById("progressBarFull");
-
 let questionCounter;
 let score;
 let currentQuestion;
@@ -96,6 +101,9 @@ let choosingAnswer;
 
 const bonus = 10;
 
+/**
+ * THE START GAME FUNCTION
+ */
 function startGame(){
     questionCounter = 0;
     score = 0;
@@ -104,13 +112,18 @@ function startGame(){
 
 };
 
+/**
+ * THE GET NEW QUESTION FUNCTION
+ */
 function getNewQuestion() {
     if(availableQuestions.length === 0) {
+        // SET FINAL SCORES TO LOCAL STORAGE
         localStorage.setItem("finalScore", score);
-        return window.location.assign("/submit.html");
         // GO TO SUBMIT PAGE
+        return window.location.assign("/submit.html");
     }
 
+    // QUESTION COUNTER
     questionCounter++ ;
     questionCounterContent.innerHTML = `${questionCounter}/${questions.length}`;
     progressBarFull.style.width = `${(questionCounter/questions.length) * 100}%`;
@@ -132,6 +145,9 @@ function getNewQuestion() {
 
 };
 
+/**
+ * ADD CLICK EVENT LISTENER TO THE ANSWER TEXT
+ */
 answersTexts.forEach((answerText, index) => {
     answerText.addEventListener('click', () => {
         if (!choosingAnswer) {
@@ -158,7 +174,7 @@ answersTexts.forEach((answerText, index) => {
         setTimeout(() => {
             selectedAnswer.classList.remove(classToApply);
             getNewQuestion()
-        }, 500);
+        }, 1000);
       
     })
     
@@ -166,6 +182,7 @@ answersTexts.forEach((answerText, index) => {
 
 startGame();
 
+// SCORE
 function increaseScore(number) {
     score += number;
     scoreConten.innerHTML = score;
