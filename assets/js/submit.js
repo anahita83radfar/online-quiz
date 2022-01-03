@@ -33,7 +33,7 @@ form.addEventListener('submit', (e) => {
         // SET HIGH SCORES TO LOCAL STORAGE
         localStorage.setItem("higherScores", JSON.stringify(higherScores));
         // GO TO HOME PAGE
-        window.location.assign("/index.html");
+        window.location.assign("./index.html");
     }
 })
 
