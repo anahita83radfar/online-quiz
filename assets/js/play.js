@@ -120,7 +120,7 @@ function getNewQuestion() {
         // SET FINAL SCORES TO LOCAL STORAGE
         localStorage.setItem("finalScore", score);
         // GO TO SUBMIT PAGE
-        return window.location.assign("../submit.html");
+        return window.location.assign("./submit.html");
     }
 
     // QUESTION COUNTER
