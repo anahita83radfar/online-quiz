@@ -37,6 +37,12 @@ This website is an example of pure JavaScript that will be targeted two aims to 
 
   ![The High scores page](/assets/images/high-scores.jpg)
 
+### Design
+- Sketch wireframes used in making the website mockup.
+
+![Sketch wireframes](/assets/images/sketch.jpg)
+
+
 # Testing
 
 - This website has been tested in different browsers: Chrome, Firefox, and Safari.
@@ -102,3 +108,6 @@ The live link can be found here - https://anahita83radfar.github.io/online-quiz/
 ### Content
 - The font in the Yoga Lovers website were taken from Google Fonts [Google Fonts](https://fonts.google.com/)
 - The website ide was taken from [Specific YouTube Tutorial](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=1)
+
+### Media
+- The favicon image is from [Free icons Library](https://icon-library.com/icon/faq-icon-white-11.html)
