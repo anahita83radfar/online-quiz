@@ -1,7 +1,6 @@
 /**
  * DECLARE CONSTANTS FOR DOM ELEMENTS
  */
-//  const saveBtn = document.getElementById("save-btn");
  const userName = document.getElementById("username");
  const CurrentFinalScore = document.getElementById("current-final-score");
  const form = document.getElementById("form");
@@ -10,12 +9,12 @@
  const finalScore = localStorage.getItem("finalScore");
  CurrentFinalScore.innerHTML = finalScore;
  
+ //The code taken from the Specific YouTube Tutorial
  const higherScores = JSON.parse(localStorage.getItem('higherScores')) || [] ;
  
  /**
-  * ADD CLICK EVENT LISTENER TO THE SAVE BUTTON
+  * ADD SUBMIT EVENT LISTENER TO THE SAVE BUTTON
   */
- // saveBtn.addEventListener('click', (e) => {
  form.addEventListener('submit', (e) => {
      e.preventDefault();
  
@@ -27,22 +26,14 @@
          };
          
          higherScores.push(userScore);
+         //The code taken from the Specific YouTube Tutorial
          higherScores.sort((a,b) => b.score - a.score);
          higherScores.splice(3);
      
          // SET HIGH SCORES TO LOCAL STORAGE
+         //The code taken from the Specific YouTube Tutorial
          localStorage.setItem("higherScores", JSON.stringify(higherScores));
          // GO TO HOME PAGE
          window.location.assign("./index.html");
      }
  });
- 
- /**
-  * ADD KEYUP EVENT LISTENER TO THE USERNAME INPUT
-  */
- // userName.addEventListener('keyup', () => {
- //     if (userName.value.trim().length > 0) {
- //         saveBtn.disabled = !userName.value;
- //     }
- // })
- 

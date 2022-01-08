@@ -105,12 +105,12 @@
  /**
   * THE START GAME FUNCTION
   */
+//The code taken from the Specific YouTube Tutorial
  function startGame(){
      questionCounter = 0;
      score = 0;
      availableQuestions = [...questions];
      getNewQuestion ();
- 
  }
  
  /**
@@ -143,7 +143,6 @@
      availableQuestions.splice(questionIndex, 1);
  
      choosingAnswer = true;
- 
  }
  
  /**
@@ -172,13 +171,12 @@
              increaseScore(bonus);
          }
  
+         //The code taken from the Specific YouTube Tutorial
          setTimeout(() => {
              selectedAnswer.classList.remove(classToApply);
              getNewQuestion();
          }, 1000);
-       
      });
-     
  });
  
  startGame();

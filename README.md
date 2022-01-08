@@ -33,7 +33,7 @@ This website is an example of pure JavaScript that will be targeted two aims to 
   ![The Submit page](/assets/images/submit.jpg)
 
 - ### The High Scores page
-  - User can access this page by visiting the Home page. This page includes the last highest scores of the users and the link to the Home page. 
+  - Users can access this page by visiting the Home page. This page includes the last highest scores of the users and the link to the Home page. 
 
   ![The High scores page](/assets/images/high-scores.jpg)
 
@@ -43,7 +43,7 @@ This website is an example of pure JavaScript that will be targeted two aims to 
 
 - This website is responsive for different devices such as desktop pc, tablets, and mobile. It functions on all standard screen sizes using the Chrome Dev Tools device toolbar.
 
-- Different parts of the website such as the home page, the play page, the question counter and progress bar, the score viewer, the question and answers, and the high scores are easy to understand and readable.
+- Different parts of the website such as the home page, the play page, the question counter, and progress bar, the score viewer, the question and answers, and the high scores are easy to understand and readable.
 
 - The colors and the font chosen are easy to read and accessible by running it through lighthouse in Chrome Devtools.
 
@@ -51,13 +51,13 @@ This website is an example of pure JavaScript that will be targeted two aims to 
 
 ### Bugs
 #### Solved bugs
-- When I deployed my project to Github page I discovered the Play page could not link to the Submit page, and also the Submit page could not link to the Home page.
+- When I deployed my project to the Github page I discovered the Play page could not link to the Submit page, and also the Submit page could not link to the Home page.
 - I discovered this was because I had used absolute file paths such as this in my js code.
 
 ![Bugs](/assets/images/bug-submit-wrong.jpg)
 ![Bugs](/assets/images/bug-index-wrong.jpg)
 
-- Changing the starting "/" and add "./" fixed the problem
+- Changing the starting "/" and adding "./" fixed the problem
 
 ![Bugs](/assets/images/bug-submit-right.jpg)
 ![Bugs](/assets/images/bug-index-right.jpg)
@@ -72,19 +72,19 @@ This website is an example of pure JavaScript that will be targeted two aims to 
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fanahita83radfar.github.io%2Fonline-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
 - JavaScript
   - No errors were found when passing through the official  [Jshint validator](https://jshint.com/).
-    - The following metrics were returned for play.js file:
+    - The following metrics were returned for the play.js file:
     - There are 7 functions in this file.
     - Function with the largest signature take 2 arguments, while the median is 0.
     - Largest function has 13 statements in it, while the median is 2.
     - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
-    - The following metrics were returned for submit.js file:
+    - The following metrics were returned for the submit.js file:
     - There are 2 functions in this file.
     - Function with the largest signature take 2 arguments, while the median is 1.5.
     - Largest function has 8 statements in it, while the median is 4.
     - The most complex function has a cyclomatic complexity value of 2 while the median is 1.5.
 
-    - The following metrics were returned for highscores.js file:
+    - The following metrics were returned for the highscores.js file:
     - There is only one function in this file.
     - It takes one argument.
     - This function contains only one statement.
