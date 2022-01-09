@@ -40,7 +40,21 @@ This website is an example of pure JavaScript that will be targeted two aims to 
 ### Design
 - Sketch wireframes used in making the website mockup.
 
-![Sketch wireframes](/assets/images/sketch.jpg)
+  - The Home page
+
+  ![Sketch the Home page](/assets/images/sketch-home.jpg)
+
+  - The play page
+
+  ![Sketch the play page](/assets/images/sketch-play.jpg)
+
+  - The submit page
+
+  ![Sketch the submit page](/assets/images/sketch-submit.jpg)
+
+  - The High Scores page
+
+  ![Sketch the High Scores page](/assets/images/sketch-highscores.jpg)
 
 
 # Testing
